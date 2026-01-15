@@ -2,322 +2,81 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Corporación Intergestión</title>
-
-  <style>
-    :root {
-      --negro: #111111;
-      --gris: #666666;
-      --blanco: #ffffff;
-      --verde: #C9DA2E;
-    }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: #222;
-      background-color: var(--blanco);
-      line-height: 1.6;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      position: relative;
-      background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%);
-      color: #fff;
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-
-    .header-text {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    header h1 {
-      font-size: 2.3rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-
-    .logo {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      height: 70px;
-      width: auto;
-    }
-
-    /* ===== SECCIONES ===== */
-    section {
-      padding: 3.5rem 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-      color: var(--negro);
-      position: relative;
-    }
-
-    h2::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 4px;
-      background: var(--verde);
-      margin-top: 0.5rem;
-    }
-
-    h3 {
-      margin-top: 0;
-      font-size: 1.3rem;
-      color: var(--verde);
-    }
-
-    /* ===== GRID Y TARJETAS ===== */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      margin-top: 2.5rem;
-    }
-
-    .card {
-      padding: 1.8rem;
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
-      background: #ffffff;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    /* ===== TESTIMONIOS ===== */
-    .testimonio {
-      font-style: italic;
-      border-left: 4px solid var(--verde);
-      padding-left: 1rem;
-      margin-bottom: 2rem;
-      color: var(--gris);
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--negro);
-      color: #fff;
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 0.5rem 0;
-      font-size: 0.95rem;
-    }
-
-    footer strong {
-      color: var(--verde);
-      letter-spacing: 0.5px;
-    }
-
-    a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.9rem;
-      }
-
-      .logo {
-        height: 55px;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-  
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo">
-      <img src="images/logo.png" alt="Corporación Intergestión">
-    </a>
 
+<header>
+  <div class="container navbar">
+    <div class="logo">Inter<span>gestión</span></div>
     <ul class="nav-menu">
-      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="programas.html">Programas</a></li>
       <li><a href="quienes-somos.html">Quiénes somos</a></li>
       <li><a href="donaciones.html">Donaciones</a></li>
     </ul>
   </div>
-</nav>
-
-<header>
-  header {
-  padding-top: 6rem;
-}
-  <img src="images/IMG_3482.jpeg" alt="Corporación Intergestión" class="logo">
-
-  <div class="header-text">
-    <h1>Conectando a las personas con sus raíces</h1>
-    <p>
-      Vinculando arte, cultura, medioambiente y patrimonio con las empresas y los individuos.
-    </p>
-  </div>
 </header>
 
-<section>
-  <h2>Quiénes Somos</h2>
-  <p>
-    Somos una organización sin ánimo de lucro establecida en Colombia que conecta el entorno
-    con las personas a través del arte, la cultura y el patrimonio.
-  </p>
-  <p>
-    Nuestra misión es proveer soluciones a empresas e individuos que, a través de proyectos y
-    programas socioambientales, buscan una sociedad más incluyente y comprometida.
-  </p>
-</section>
-
-<section>
-  <h2>Soluciones Creativas para Empresas</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Formación Artística</h3>
-      <p>
-        Espacios de aprendizaje, entretenimiento y recreación integral para jóvenes,
-        fomentando el desarrollo artístico, la creatividad y la conciencia cultural
-        y ambiental.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Eventos Culturales</h3>
-      <p>
-        Organización y producción de eventos artísticos y culturales que visibilizan
-        la riqueza patrimonial y la diversidad de Colombia.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Medio Ambiente</h3>
-      <p>
-        Apoyo y acompañamiento a proyectos de agricultura urbana caseros y comunitarios,
-        promoviendo la preservación y conservación medioambiental.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Participación Comunitaria</h3>
-      <p>
-        Acompañamiento técnico y logístico a iniciativas comunitarias y corporativas.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Exhibiciones</h3>
-      <p>
-        Espectáculos con artistas de trayectoria y nuevos talentos emergentes, llevando
-        el arte a diversos territorios.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Instalaciones Artísticas</h3>
-      <p>
-        Diseño y montaje de instalaciones artísticas itinerantes o temporales para aliados
-        y grupos de interés.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Eventos Públicos</h3>
-      <p>
-        Instalaciones de arte a gran escala que transforman espacios públicos e involucran
-        activamente a la comunidad.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Capacitación Medio Ambiental</h3>
-      <p>
-        Talleres, charlas, seminarios, foros y eventos académicos orientados a la
-        preservación del medio ambiente.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Preservación del Patrimonio</h3>
-      <p>
-        Iniciativas de investigación, documentación y conservación del patrimonio cultural
-        de Colombia.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Presentaciones Artísticas</h3>
-      <p>
-        Espacios culturales que permiten a los artistas explorar, crear y compartir
-        nuevas ideas con el público.
-      </p>
-    </div>
+<section class="hero">
+  <div class="container">
+    <h1>Gestión social con impacto real</h1>
+    <p>
+      Desarrollamos programas sociales, educativos y comunitarios orientados
+      a la transformación territorial y al fortalecimiento del tejido social.
+    </p>
   </div>
 </section>
 
-<section>
-  <h2>Testimonios</h2>
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nuestros programas</h2>
+    </div>
 
-  <div class="testimonio">
-    “CorpoIntergestión ha sido fundamental para conectar nuestra marca con artistas locales
-    y eventos culturales, creando experiencias auténticas y significativas.”
-  </div>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="img/programa1.jpg" alt="Programa educativo">
+        <div class="card-body">
+          <h3>Educación y formación</h3>
+          <p>Procesos formativos orientados al desarrollo humano y comunitario.</p>
+          <a href="programas.html" class="btn">Ver más</a>
+        </div>
+      </div>
 
-  <div class="testimonio">
-    “El equipo de la Corporación Intergestión es apasionado por el arte y la cultura.
-    Su dedicación ha sido invaluable para apoyar a los artistas locales.”
-  </div>
+      <div class="card">
+        <img src="img/programa2.jpg" alt="Programa social">
+        <div class="card-body">
+          <h3>Gestión social</h3>
+          <p>Intervenciones sociales con enfoque participativo y territorial.</p>
+          <a href="programas.html" class="btn">Ver más</a>
+        </div>
+      </div>
 
-  <div class="testimonio">
-    “El compromiso de Intergestión con el arte, la cultura y el medio ambiente es inspirador
-    y ha tenido un impacto significativo en nuestra comunidad.”
+      <div class="card">
+        <img src="img/programa3.jpg" alt="Programa cultural">
+        <div class="card-body">
+          <h3>Cultura y patrimonio</h3>
+          <p>Acciones para la protección y apropiación social del patrimonio.</p>
+          <a href="programas.html" class="btn">Ver más</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p><strong>Contacto</strong></p>
+  <div class="container footer-content">
+    <p>© 2026 Corporación Intergestión</p>
 
-  <div class="social">
-        <a href="https://www.linkedin.com/company/corpointergestion" target="_blank">
-      <img src="icons/linkedin.svg" alt="LinkedIn">
-    </a>
-    <a href="https://www.instagram.com/corpointergestion" target="_blank">
-      <img src="icons/instagram.svg" alt="Instagram">
-    </a>
-    <a href="https://www.facebook.com/corpointergestion" target="_blank">
-      <img src="icons/facebook.svg" alt="Facebook">
-    </a>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank">F</a>
+      <a href="https://instagram.com" target="_blank">I</a>
+      <a href="https://linkedin.com" target="_blank">L</a>
+    </div>
   </div>
-
-  <p>Email: info@corpointergestion.org</p>
-  <p>© Corporación Intergestión – Colombia</p>
 </footer>
 
 </body>
