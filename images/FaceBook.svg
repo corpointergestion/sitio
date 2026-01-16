@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 89.44 89.44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: url(#Degradado_sin_nombre_44);
+        mix-blend-mode: multiply;
+        opacity: .8;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        isolation: isolate;
+      }
+    </style>
+    <radialGradient id="Degradado_sin_nombre_44" data-name="Degradado sin nombre 44" cx="44.72" cy="44.72" fx="44.72" fy="44.72" r="44.72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#010101"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="54.44" y1="84.49" x2="23.58" y2="-16.78" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a3cd3a"/>
+      <stop offset="1" stop-color="#faf7c9"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="58.04" y1="73.09" x2="28.94" y2="9.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a3cd3a"/>
+      <stop offset="1" stop-color="#faf7c9"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-4">
+    <g id="Layer_1" data-name="Layer 1">
+      <g>
+        <path class="cls-2" d="M44.72,0c-3.75,0-7.41.47-10.89,1.34C16.09,5.77,2.57,20.8.32,39.3c-.22,1.77-.32,3.59-.32,5.42,0,24.7,20.02,44.72,44.72,44.72s44.72-20.02,44.72-44.72S69.41,0,44.72,0ZM41.43,5.43c20.06,0,36.39,16.32,36.39,36.39s-16.32,36.4-36.39,36.4S5.05,61.88,5.05,41.82,21.37,5.43,41.43,5.43Z"/>
+        <path class="cls-3" d="M41.43.64c-2.6,0-5.14.24-7.6.71C15.54,4.77,1.48,20.33.32,39.3c-.05.83-.07,1.67-.07,2.52,0,22.71,18.47,41.19,41.18,41.19s41.18-18.48,41.18-41.19S64.15.64,41.43.64ZM41.43,78.22c-20.06,0-36.39-16.33-36.39-36.4S21.37,5.43,41.43,5.43s36.39,16.32,36.39,36.39-16.32,36.4-36.39,36.4Z"/>
+        <path class="cls-1" d="M35.01,42.26v23.76c0,.34.28.62.62.62h8.82c.34,0,.62-.28.62-.62v-24.14h6.4c.32,0,.59-.25.62-.57l.62-7.27c.03-.36-.25-.67-.62-.67h-7.01v-5.16c0-1.21.98-2.19,2.19-2.19h4.93c.34,0,.62-.28.62-.62v-7.27c0-.34-.28-.62-.62-.62h-8.33c-4.89,0-8.85,3.96-8.85,8.85v7.01h-4.41c-.34,0-.62.28-.62.62v7.27c0,.34.28.62.62.62h4.41v.39Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
