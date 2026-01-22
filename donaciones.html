@@ -5,18 +5,272 @@
   <title>Donaciones | Corporación Intergestión</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    :root {
+      --negro: #111111;
+      --gris: #666666;
+      --blanco: #ffffff;
+      --verde: #C9DA2E;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: #222;
+      background-color: var(--blanco);
+      line-height: 1.6;
+    }
+
+    /* ===== MENU HAMBURGUESA ===== */
+    .navbar {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 2000;
+    }
+
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      background: rgba(0,0,0,0.6);
+      padding: 0.6rem;
+      border-radius: 6px;
+    }
+
+    .menu-toggle span {
+      width: 26px;
+      height: 3px;
+      background: var(--verde);
+      margin: 4px 0;
+      transition: 0.3s ease;
+    }
+
+    /* Animación a X */
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .nav-menu {
+      list-style: none;
+      background: var(--negro);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 0.8rem;
+      display: none;
+      min-width: 180px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .nav-menu li {
+      margin-bottom: 1rem;
+    }
+
+    .nav-menu li:last-child {
+      margin-bottom: 0;
+    }
+
+    .nav-menu a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .nav-menu a:hover {
+      color: var(--verde);
+    }
+
+    .nav-menu.active {
+      display: block;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: relative;
+      background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%);
+      color: #fff;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    .header-text {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .logo {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      height: 70px;
+      width: auto;
+    }
+
+    /* ===== SECCIONES ===== */
+    section {
+      padding: 3.5rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--negro);
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--verde);
+      margin-top: 0.5rem;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: var(--verde);
+    }
+
+    /* ===== GRID Y TARJETAS ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .card {
+      padding: 1.8rem;
+      border: 1px solid rgba(201, 218, 46, 0.3);
+      border-radius: 8px;
+      background: #111111;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+	.card p {
+	  color: #F0F0F0;
+	}
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(201, 218, 46, 0.25);
+    }
+
+    /* ===== TESTIMONIOS ===== */
+    .testimonio {
+      font-style: italic;
+      border-left: 4px solid var(--verde);
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+      color: var(--gris);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--negro);
+      color: #fff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    footer strong {
+      color: var(--verde);
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== FRANJA REDES ===== */
+    .social-bar {
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .social-bar a {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--verde);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s ease;
+    }
+
+    .social-bar a:hover {
+      background: var(--verde);
+    }
+
+.social-bar img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) saturate(100%) invert(69%) sepia(54%) saturate(467%) hue-rotate(16deg);
+  transition: 0.2s ease;
+}
+
+.social-bar a:hover img {
+  filter: brightness(0) saturate(100%) invert(8%) sepia(6%) saturate(6%) hue-rotate(0deg);
+}
+  </style>
 </head>
+
 <body>
 
+<!-- ===== MENU HAMBURGUESA ===== -->
+<nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-menu" id="nav-menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="quienes-somos.html">Quiénes somos</a></li>
+    <li><a href="donaciones.html">Donaciones</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HEADER ===== -->
 <header>
-  <div class="container navbar">
-    <div class="logo">Inter<span>gestión</span></div>
-    <ul class="nav-menu">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="programas.html">Programas</a></li>
-      <li><a href="quienes-somos.html">Quiénes somos</a></li>
-      <li><a href="donaciones.html" class="active">Donaciones</a></li>
-    </ul>
+  <img src="images/logo-corpointergestion.png" alt="Corporación Intergestión" class="logo">
+
+  <div class="header-text">
+    <h1>Conectando a las personas con sus raíces</h1>
+    <p>
+      Vinculando arte, cultura, medioambiente y patrimonio con las empresas y los individuos.
+    </p>
   </div>
 </header>
 
@@ -37,10 +291,39 @@
 </section>
 
 <footer>
-  <div class="container footer-content">
-    <p>© 2026 Corporación Intergestión</p>
+  <p><strong>Contacto</strong></p>
+  <p>Email: <a href="mailto:info@corpointergestion.org">info@corpointergestion.org</a></p>
+  <p><img src="images/WhatsApp.svg" alt="Corporación Intergestión" width="30">Teléfono / WhatsApp: <a href="https://wa.me/573166860434">+57 316 686 0434</a></p>
+
+  <!-- ===== FRANJA REDES ===== -->
+  <div class="social-bar">
+      <a href="https://www.linkedin.com/company/corpointergestion" target="_blank" aria-label="LinkedIn">
+      <img src="images/LinkedIn.svg" alt="LinkedIn">
+    </a>
+    <a href="https://www.instagram.com/corpointergestion" target="_blank" aria-label="Instagram">
+      <img src="images/InstaGram.svg" alt="InstaGram">
+    </a>
+    <a href="https://www.facebook.com/corpointergestion" target="_blank" aria-label="Facebook">
+      <img src="images/FaceBook.svg" alt="FaceBook">
+    </a>
+        <a href="https://www.youtube.com/@corpointergestion" target="_blank" aria-label="YouTube">
+      <img src="images/YouTube.svg" alt="YouTube">
+    </a>
   </div>
+
+  <p>© Corporación Intergestión – Colombia – 2026</p>
 </footer>
+
+<!-- ===== SCRIPT ===== -->
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("nav-menu");
+
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("open");
+    menu.classList.toggle("active");
+  });
+</script>
 
 </body>
 </html>
