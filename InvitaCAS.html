@@ -1,43 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Formulario de Inscripción Programas CAS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oferta Programas CAS – Corporación Intergestión</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
+<style>
+:root {
+  --negro: #000000;
+  --verde: #C9DA2E;
+  --blanco: #ffffff;
+  --gris: #666666;
+}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
+* {
+  box-sizing: border-box;
+}
 
-        .imagen-principal {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-        }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--negro);
+  color: var(--blanco);
+}
 
-        .formulario {
-            width: 100%;
-            height: 800px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
+/* ===== PORTADA COMPLETA ===== */
 
-        h1 {
-            margin-bottom: 15px;
-        }
+.hero {
+  min-height: 100vh;
+  background-color: var(--negro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero img {
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== SECCIÓN FORMULARIO ===== */
+
+.form-section {
+  background: var(--negro);
+  padding: 5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  background: var(--blanco);
+  color: #111;
+  max-width: 950px;
+  width: 100%;
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.form-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-container p {
+  color: var(--gris);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.form-container iframe {
+  width: 100%;
+  height: 900px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-container iframe {
+    height: 750px;
+  }
+}
 /* ===== SECCIÓN CAS ===== */
 
 .cas-hero {
@@ -97,17 +150,26 @@
   background: #aebf1f;
   transform: translateY(-2px);
 }
-    </style>
+</style>
 </head>
 
-<section class="cas-hero">
-  <div class="cas-overlay">
-    <div class="cas-card">
-      <h1>Oferta Programas CAS CorpoIntergestión</h1>
-      <p>
-        El propósito de este formulario es registrar cuáles son los intereses 
-        de los estudiantes en los diferentes programas CAS.
-      </p>
+<body>
+
+<!-- ===== PORTADA ===== -->
+
+<section class="hero">
+  <img src="images/Invita_CAS.png" alt="Oferta Programas CAS CorpoIntergestión">
+</section>
+
+<!-- ===== FORMULARIO ===== -->
+
+<section class="form-section">
+  <div class="form-container">
+    <h1>Oferta Programas CAS CorpoIntergestión</h1>
+    <p>
+      El propósito de este formulario es registrar cuáles son los intereses 
+      de los estudiantes en los diferentes programas CAS.
+    </p>
 
       <a href="https://forms.cloud.microsoft/r/sKemvneSTH" 
          target="_blank" 
@@ -116,23 +178,8 @@
       </a>
     </div>
   </div>
+</section>  </div>
 </section>
-
-<body>
-
-    <div class="container">
-        <h1>Inscríbete aquí</h1>
-
-        <!-- Imagen -->
-        <img src="images/Invita_CAS.png" alt="Imagen promocional" class="imagen-principal">
-
-        <!-- Formulario Microsoft Forms -->
-        <iframe 
-            class="formulario"
-            src="https://forms.cloud.microsoft/r/sKemvneSTH"
-            allowfullscreen>
-        </iframe>
-    </div>
 
 </body>
 </html>
